@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Message from './components/Message';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Message title="Homework1" />
+      <Message text="Развернуть новый проект с использованием create-react-app." />
+      <Message text="Создать компонент Message, отображающий переданный ему props текст." />
+      <Message text="Дополнительное задание Установить расширение React Devtools." />
     </div>
   );
 }
