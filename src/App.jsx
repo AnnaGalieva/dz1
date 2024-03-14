@@ -11,6 +11,10 @@ import HomePage from './components/dz4/HomePage';
 import AboutPage from './components/dz4/AboutPage';
 import { ThemeContext } from './components/dz5/theme-context.jsx';
 import React from 'react';
+import { Provider } from "react-redux";
+import store from "./store/store.js";
+import AddProduct from './components/dz6/AddProduct.js';
+import ProductList from './components/dz6/ProductList.js';
 
 
 
@@ -55,7 +59,7 @@ function App() {
       ---------------------------------------------------------------------------
       <h1 className='title'>Домашнее задание 5</h1>
       <header
-              style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
+        style={{ backgroundColor: theme.backgroundColor, color: theme.color }}
       >
         <button
           type="button"
@@ -68,8 +72,22 @@ function App() {
         >
           Toggle to {!dark ? 'Dark' : 'Light'} theme
         </button>
-          
+
       </header>
+      ----------------------------------------------------------------------------
+      <Provider store={store}>
+        <div>
+          <h1 className='title'>Домашнее задание 6</h1>
+          <div className="content">
+            <div>
+              <AddProduct />
+            </div>
+            <div>
+              <ProductList />
+            </div>
+          </div>
+        </div>
+      </Provider>
     </div>
   );
 }
